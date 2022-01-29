@@ -1,0 +1,13 @@
+
+        Class Program { main() {
+            If(a>b){
+                x.pein();
+            }
+            Elseif(x>a){
+                a =2;
+            }
+            Else{
+                x.hihi(2+3);
+            }
+        }
+        }

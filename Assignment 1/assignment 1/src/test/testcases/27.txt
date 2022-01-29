@@ -1,0 +1,11 @@
+
+        Class Shape{
+            Var $num1: Array[Int,9] = New abs(ab,12+7);
+            Circle(a:String; b:Int){
+                s = New a(12+8,_hi);
+                x = ar[1][3];
+                ta = Out.print(6);
+                Return a;
+            }
+        }
+        

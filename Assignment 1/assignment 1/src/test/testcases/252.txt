@@ -1,0 +1,6 @@
+
+        Class x{
+            Val a: Blean = x||y;
+        }
+        Class Program { main() { }
+        }

@@ -1,0 +1,8 @@
+
+        Class class1{
+            Var cas2,__asd_2: Int = 123_42e12;
+            main(){
+                a = a::$abc && abc.abc.a();
+            }
+        }
+        

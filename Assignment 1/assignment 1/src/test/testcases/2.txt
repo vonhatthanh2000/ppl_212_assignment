@@ -1,0 +1,8 @@
+
+        Class Test{
+            add_number(){
+                a = 1+2+3;
+            }
+        }
+        
+        

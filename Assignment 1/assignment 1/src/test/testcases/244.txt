@@ -1,0 +1,8 @@
+
+        Class X{
+            temp(a_: INt; x,y: a ;z:Int){
+                
+            }
+        }
+        Class Program { main() { }
+        }

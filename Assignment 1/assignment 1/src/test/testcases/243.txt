@@ -1,0 +1,6 @@
+
+        Clss a{
+
+        }
+        Class Program { main() { }
+        }

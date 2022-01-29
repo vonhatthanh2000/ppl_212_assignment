@@ -1,0 +1,7 @@
+
+        Class Test{
+            Destructor(){
+                a = a + b;
+            }
+        }
+        

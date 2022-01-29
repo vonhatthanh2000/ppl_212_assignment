@@ -1,0 +1,6 @@
+
+        Class x{
+            Destructor(a:Int){}
+        }
+        Class Program { main() { }
+        }

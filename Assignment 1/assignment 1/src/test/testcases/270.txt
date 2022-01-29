@@ -1,0 +1,10 @@
+
+        Class x{
+            a(){
+            Foreach (i In 1+2 .. 100/3) {
+                Out.printInt(i);
+                Return a;
+            }}
+        }
+        Class Program { main() { }
+        }

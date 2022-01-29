@@ -1,0 +1,6 @@
+
+        Class Program { main() {
+            Self.a = x;
+            out.a(x+1/10_234*(7.2E-17));
+         }
+        }

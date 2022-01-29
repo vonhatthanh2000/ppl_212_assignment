@@ -1,0 +1,5 @@
+
+        Class Test{
+            Var string: STRING = "ASCAS" ==. "TASD";
+        }
+        

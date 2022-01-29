@@ -1,0 +1,14 @@
+
+        Class class1{
+            Var cas2: Int;
+            main(){
+                a = a::$abc + abc.abc.a();
+                If(a<b){
+                    a = a + b;
+                }
+                Else{
+                    Return a;
+                }
+            }
+        }
+        

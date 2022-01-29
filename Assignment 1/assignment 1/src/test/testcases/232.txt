@@ -1,0 +1,6 @@
+
+        Class haha : hihi : x{
+
+        }
+        Class Program { main() { }
+        }

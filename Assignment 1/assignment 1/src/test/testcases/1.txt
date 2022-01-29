@@ -1,0 +1,7 @@
+
+        Class Shape: Circle {
+            circle(){
+                Return Self.radius * pi;
+            }
+        }
+        

@@ -1,0 +1,7 @@
+
+        Class Program{
+            main(){
+                s = New a(12+8,_hi);
+            }
+        }
+        

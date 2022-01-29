@@ -1,0 +1,7 @@
+
+        Class _x{
+            Var temp, A, _: Int;
+            Val $iny,w,a9s: float = New float(2,3), New float(4,7), New INet(24,2,2*2);
+        }
+        Class Program { main() { }
+        }

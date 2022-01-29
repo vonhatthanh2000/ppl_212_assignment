@@ -1,0 +1,6 @@
+
+        Class x{
+            Val 8x: Int;
+        }
+        Class Program { main() { }
+        }

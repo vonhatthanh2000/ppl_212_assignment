@@ -1,0 +1,7 @@
+
+        Class Test{
+            $tada(x,y,z){
+                Return Self.id +3;
+            }
+        }
+        

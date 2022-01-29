@@ -1,0 +1,6 @@
+
+        Class _x{
+            var temp: Int;
+        }
+        Class Program { main() { }
+        }

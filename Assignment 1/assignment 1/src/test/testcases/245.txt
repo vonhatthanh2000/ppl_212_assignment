@@ -1,0 +1,8 @@
+
+        Class x{
+            a(){
+                Return 9;
+            }
+        }
+        Class Program { main() { }
+        }

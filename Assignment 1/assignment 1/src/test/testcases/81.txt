@@ -1,0 +1,7 @@
+
+        Class Test{
+            test(){
+                s = r*r+Self.Pi+a.a.a();
+            }
+        }
+        

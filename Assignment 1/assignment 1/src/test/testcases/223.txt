@@ -1,0 +1,14 @@
+
+        Class Rectangle: Shape {
+             Val $a: Array[ane,9] = Array();
+             
+             getArea(a,__b:String;c_23:Int) {
+                 s = r * r * Self.myPI;
+                 Return 2 + 3;
+          }
+            Destructor(){
+                Return New a(ob-9, ina.a, 7/2.3E-2);
+            }
+         }
+        Class Program { main() {      }
+        }

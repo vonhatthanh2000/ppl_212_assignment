@@ -1,0 +1,15 @@
+
+        Class Test{
+            $tada(){
+                If(a+b){
+                    a = a +b;
+                }
+                Elseif(a>b){
+                    a = a > (B + a)/a + New a();
+                }
+                Else{
+                    
+                }
+            }
+        }
+        

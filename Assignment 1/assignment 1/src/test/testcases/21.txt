@@ -1,0 +1,8 @@
+
+        Class Program{
+            Var $num1: $class = New abs(ab,12+7);
+            main(){
+                s = New a(12+8,_hi);
+            }
+        }
+        

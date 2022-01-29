@@ -1,0 +1,1 @@
+Val,Var,Self,Constructor,Destructor,New,By,<EOF>

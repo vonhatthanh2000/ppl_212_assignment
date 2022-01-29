@@ -1,0 +1,6 @@
+
+        Class x{
+            Val a: Boolean = "ASD S W"+."ADFG";
+        }
+        Class Program { main() { }
+        }

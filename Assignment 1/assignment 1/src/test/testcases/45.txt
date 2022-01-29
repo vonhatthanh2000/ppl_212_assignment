@@ -1,0 +1,11 @@
+
+        Class class1{
+            Var cas2: Int;
+            main(){
+                a = a::$abc + abc.abc.a();
+                Foreach (abc In 1 .. 10 By 2){
+                    a = a + b;
+                }
+            }
+        }
+        

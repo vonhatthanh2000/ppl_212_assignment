@@ -1,0 +1,9 @@
+
+        Class class1{
+            Var cas2: Int;
+            ##This is comment but not error##
+            main(){
+                a = a::$abc && abc.abc.a();
+            }
+        }
+        

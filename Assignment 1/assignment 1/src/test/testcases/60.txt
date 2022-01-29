@@ -1,0 +1,7 @@
+
+        Class Class{
+            main(){
+                a = 7*2 + ab[1][2];
+            }
+        }
+        

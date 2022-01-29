@@ -1,0 +1,8 @@
+
+        Class Program { 
+            Val x: Int = 2;
+            am(a,b,c: Int){
+                Return oa.a();
+            }
+            main() { }
+        }

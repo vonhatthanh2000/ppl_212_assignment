@@ -1,0 +1,8 @@
+
+        Class x{
+            $getnuber({
+                Return a*b;
+            }
+        }
+        Class Program { main() { }
+        }

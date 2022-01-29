@@ -1,0 +1,10 @@
+
+        Class Test{
+            Var Shape: Array[Float,0b1010];
+            Val width: Float = 3.23 + 4;
+            Var Area, Volume: Int;
+            getWidth(x,y__,z:Int;__a,c_23:String){
+                Return width;
+            }
+        }
+        

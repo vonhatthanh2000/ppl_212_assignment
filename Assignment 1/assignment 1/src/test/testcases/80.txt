@@ -1,0 +1,9 @@
+
+        Class Test{
+            test(){
+                Var s,b: Int;
+                r=2.0;
+                Var a,b: Array[Int,5];
+            }
+        }
+        

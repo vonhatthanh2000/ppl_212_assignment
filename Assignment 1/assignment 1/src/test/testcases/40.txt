@@ -1,0 +1,8 @@
+
+        Class class1{
+            Var $num1,num2,num3: Array[Int,9] = New abs(ab,12+7);
+            main(){
+                a = a::$abc + abc.abc.a();
+            }
+        }
+        

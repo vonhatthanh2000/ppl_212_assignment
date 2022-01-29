@@ -1,0 +1,6 @@
+
+        Class x{
+            Val _x,y: Int == 7;
+        }
+        Class Program { main() { }
+        }

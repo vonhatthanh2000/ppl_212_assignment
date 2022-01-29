@@ -1,0 +1,7 @@
+
+        Class Test{
+            $getnumber(){
+                Return Self.length + Self.width;
+            }
+        }
+        

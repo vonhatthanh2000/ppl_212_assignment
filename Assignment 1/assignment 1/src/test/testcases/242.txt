@@ -1,0 +1,6 @@
+
+        Class x{
+            Val _x: Int = 7*1 + New x(2,3) - 9 + par[2][4];
+        }
+        Class Program { main() { }
+        }

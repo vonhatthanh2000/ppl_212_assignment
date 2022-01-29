@@ -1,0 +1,7 @@
+
+         Class x{
+             ##a##
+            Val _x: Int;
+        }
+        Class Program { main() { }
+        }

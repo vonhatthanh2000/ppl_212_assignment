@@ -1,0 +1,10 @@
+
+        Class Test{
+            Var Shape: String = "12312";
+            Val width: Int = 3;
+            Var Area, Volume: Int;
+            getWidth(){
+                Return width;
+            }
+        }
+        

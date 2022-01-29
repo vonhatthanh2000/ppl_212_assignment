@@ -1,0 +1,6 @@
+
+        Class x{
+            Val a: Boolean = "ASDF \n"==."a'"";
+        }
+        Class Program { main() { }
+        }

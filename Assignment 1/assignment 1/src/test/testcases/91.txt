@@ -1,0 +1,7 @@
+
+        Class Test{
+            $tada(){
+                Return Self.abd +3;
+            }
+        }
+        

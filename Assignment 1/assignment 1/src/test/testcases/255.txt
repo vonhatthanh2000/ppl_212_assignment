@@ -1,0 +1,6 @@
+
+        Class x{
+            Val a: Boolean = x>==y;
+        }
+        Class Program { main() { }
+        }

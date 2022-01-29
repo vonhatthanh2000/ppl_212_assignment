@@ -1,0 +1,16 @@
+
+        Class Rectangle: Shape {
+             Val $numOfShape: Int = aasd;
+             Val immutableAttribute: Int = asd;
+             Var length, width: Int;
+             
+             getArea() {
+                 Return 1+0;
+          }
+         }
+         Class Program {
+            main() {
+            
+             }
+         }
+        

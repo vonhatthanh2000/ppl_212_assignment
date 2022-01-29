@@ -1,0 +1,6 @@
+
+        Class Program { main() {
+            Val x : Int = 2;
+            Var $y: a = 1..;
+         }
+        }

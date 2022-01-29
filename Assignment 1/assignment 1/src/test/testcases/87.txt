@@ -1,0 +1,7 @@
+
+        Class Test{
+            $tada(){
+                Out.printInt(Shape.$numOfShape);
+            }
+        }
+        

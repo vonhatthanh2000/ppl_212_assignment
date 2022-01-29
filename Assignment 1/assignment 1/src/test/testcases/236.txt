@@ -1,0 +1,6 @@
+
+        Class x{
+            Val $x: Int;
+        }
+        Class Program { main() { }
+        }

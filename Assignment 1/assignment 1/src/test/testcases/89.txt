@@ -1,0 +1,6 @@
+
+        Class main{}
+        Class Program(){
+            main(){}
+        }
+        

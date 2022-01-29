@@ -1,0 +1,7 @@
+
+        Class Test::$tada{
+            test(){
+                Self.x = t * a;
+            }
+        }
+        

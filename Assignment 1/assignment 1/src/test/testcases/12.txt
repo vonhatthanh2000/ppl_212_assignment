@@ -1,0 +1,13 @@
+
+        Class Test{
+            Var Shape: Array[Float,0b1010];
+            Val width: Float = 3.23 + 4;
+            Var Area, Volume: Int;
+            getWidth(x,y,z:Int;__a,$b:String){
+                Return width;
+            }
+            Constructor(){
+                Var amilo: Boolean = 3+4*4;
+            }
+        }
+        

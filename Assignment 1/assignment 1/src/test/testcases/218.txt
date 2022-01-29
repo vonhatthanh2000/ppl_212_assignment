@@ -1,0 +1,20 @@
+
+        Class Rectangle: Shape {
+             Val $numOfShape: Int;
+             Val immutableAttribute: Int = 0;
+             Var length, width: Array[Float, 102];
+             
+             getArea(a,__b:String;c_23:Int) {
+                 s = r * r * Self.myPI;
+                 Seft.x[7] = New a();
+                 Return 2 + 3;
+          }
+            Destructor(){
+                Return a-b;
+            }
+         }
+         Class Program {
+            main() {
+            
+             }
+         }

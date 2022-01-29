@@ -1,0 +1,6 @@
+
+        Class x{
+            Val a: Boolean = x>y<23!=4*2/a&&4;
+        }
+        Class Program { main() { }
+        }

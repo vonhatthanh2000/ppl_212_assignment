@@ -1,0 +1,10 @@
+
+        Class Test{
+            test(){
+                Foreach (a In 1+2 .. 120.12/5){
+                    ABD.Printout();
+                    Continue;
+                }
+            }
+        }
+        

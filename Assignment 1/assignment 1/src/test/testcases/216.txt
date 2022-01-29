@@ -1,0 +1,19 @@
+
+        Class Rectangle: Shape {
+             Val $numOfShape: x= New _awx(12 + 7, 8);
+             Val immutableAttribute: Int = 0;
+             Var length, width: Array[Float, 102];
+             
+             getArea(a,__b:String;c_23:Int) {
+                 s = r * r * Self.myPI;
+                 Return 2 + 3;
+          }
+            Destructor(){
+                Return a-b;
+            }
+         }
+         Class Program {
+            main() {
+            
+             }
+         }

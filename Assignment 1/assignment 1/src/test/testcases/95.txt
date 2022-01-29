@@ -1,0 +1,7 @@
+
+        Class Test{
+            $tada(){
+                Return +3+1+4;
+            }
+        }
+        

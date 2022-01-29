@@ -1,0 +1,8 @@
+
+        Class class1{
+            Var 8cas2: Int;
+            main(){
+                a = a::$abc + abc.abc.a();
+            }
+        }
+        

@@ -1,0 +1,1 @@
+ String1 '" Inside '" with the quote '" ,<EOF>
