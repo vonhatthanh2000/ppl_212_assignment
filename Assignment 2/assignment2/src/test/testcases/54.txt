@@ -1,0 +1,1 @@
+Class Simple{Val $Shape: Int = 3;function(){Foreach (i In 1 .. 100){b = a +. b;}}Var a,$b: String= "string1" || ((1---4) > 5), a[1][a[3+4]] + 2;gloat(a,b:Int){a = 1+2;}$staticfun(){}Destructor(){}}

@@ -25,7 +25,7 @@ options {
 program: class_declaration EOF;
 //class_declaration
 class_declaration: class_declaration_part+;
-class_declaration_part: class_keyword (main_keyword|ID|Program) (COLON ID)? LP member* RP; 
+class_declaration_part: CLASS (main_keyword|ID|Program) (COLON ID)? LP member* RP; 
 class_keyword: CLASS;
 member: attribute_lit | method_lit;
 
@@ -43,7 +43,7 @@ method_constructor: CONSTRUCTOR (LB parameter_list? RB)? block_stm_no_return;
 main_destructor:(main_keyword|DESTRUCTOR) (LB RB)? block_stm_no_return;
 normal_method: identifier (LB parameter_list? RB)? block_stm;
 
-parameter_list: identifier_list (SEMI parameter_list)?;
+parameter_list: identifier_list (SEMI identifier_list)*;
 identifier_list: identifier (CM identifier)* COLON type_name; 
 
 //Block statement in 6.9
@@ -52,7 +52,7 @@ identifier_list: identifier (CM identifier)* COLON type_name;
 //6. Statement
 ///6.9 Block statement
 
-block_stm_no_return: LP stm_no_return* block_stm_no_return* RP;
+block_stm_no_return: LP stm_no_return* RP;
 
 stm_no_return: 
     variable_statement SEMI
@@ -65,7 +65,7 @@ stm_no_return:
     ;
 
 
-block_stm: LP stm* block_stm? RP;
+block_stm: LP stm*  RP;
 
 stm: 
     variable_statement SEMI
@@ -83,7 +83,7 @@ variable_statement: (VAR|VAL) variable_list COLON type_name (ASSIGN expr_list)?;
 variable_list: ID (CM ID)*;
 
 ///6.2 Assignment statement
-assignment_statement: (ID|index_exp|method_statement|array_attribute) ASSIGN expr;
+assignment_statement: (ID|index_expr|method_statement|array_attribute) ASSIGN expr;
 
 //6.3 if statement
 if_statement: 
@@ -107,57 +107,35 @@ return_statement: Return_word expr?;
 Return_word: RETURN;
 
 //6.8 Method invocation statement
-method_statement: (ID|DO_ID|self_keyword) (DOT (ID|method_statement))* (LB expr_list? RB)? 
+method_statement: (ID|DO_ID|Self) (DOT (ID|method_statement))* (LB expr_list? RB)? 
 | (ID) (DOUBLE_COLON (DO_ID|method_statement))* (LB expr_list? RB)? ;
 
 
 //5.9 Operator precedence and associativity
 expr_list: expr (CM expr)*;
-expr: parenth_exp|object_create|static_access_exp|instance_access_exp|index_exp|arithmetic_exp|relational_expr|string_expr|array_component;
+expr: string_expr;
+string_expr: relational_expr string_op relational_expr | relational_expr;
+relational_expr: logical_expr relational_op logical_expr | logical_expr;
+logical_expr: logical_expr logical_op add_expr | add_expr;
+add_expr: add_expr add_op mul_expr | mul_expr;
+mul_expr: mul_expr multi_op log_expr | log_expr;
+log_expr: negation_op log_expr | sign_expr;
+sign_expr: negation_number sign_expr | index_expr;
+index_expr: index_expr index_op | instance_access_expr;
+instance_access_expr: instance_access_expr instance_element | static_access_expr;
+static_access_expr: static_element | new_expr;
+new_expr: NEW ID (LB expr_list? RB)? | parenth_exp;
+parenth_exp: LB expr RB | operative;
+operative: literal|array_component|array_attribute|Self| ID ;
 
-parenth_exp: LB expr RB;
-object_create: <assoc=right> new_keyword ID LB expr_list? RB;
-new_keyword: NEW;
-static_access_exp: ID (DOUBLE_COLON (DO_ID))+ (LB expr_list? RB)?;
-instance_access_exp: (ID|self_keyword) (DOT (ID))+ (LB expr_list? RB)?;
-self_keyword: Self;
-index_exp: LS expr RS | LS expr RS index_exp;
-arithmetic_exp: 
-parenth_exp
-| <assic=right> negation_number arithmetic_exp 
-| not_logical_expr
-| arithmetic_exp multi_op arithmetic_exp
-| mod_expr 
-| arithmetic_exp add_op arithmetic_exp
-| logical_expr | object_create
-| static_access_exp | instance_access_exp | NONZERO_INT | INT_LIT | FLOAT_LIT |array_attribute| ID;
+literal: boollit| NONZERO_INT | INT_LIT | FLOAT_LIT | STRING_LIT;
 
-
-not_logical_expr: <assoc=right> negation_op not_logical_expr
-                | static_access_exp | instance_access_exp | Bool_LIT | array_attribute | ID ;
-
-mod_expr: mod_expr MOD mod_expr
-        | static_access_exp | instance_access_exp | NONZERO_INT | INT_LIT | array_attribute | ID ;
-
-logical_expr:  logical_expr logical_op logical_expr
-                | static_access_exp | instance_access_exp | Bool_LIT |array_attribute| ID ;
-
-relational_expr: relatonal_bool | relational_number ;
-
-relatonal_bool: relatonal_bool relational_op_bool relatonal_bool 
-               | parenth_exp |  object_create | static_access_exp | instance_access_exp | arithmetic_exp
-               | NONZERO_INT | INT_LIT |Bool_LIT|array_attribute | ID ;
-
-relational_number: relational_number relational_op_number relational_number
-                | parenth_exp |  object_create | static_access_exp | instance_access_exp | arithmetic_exp 
-                | NONZERO_INT | INT_LIT | FLOAT_LIT |array_attribute| ID ;
-
-string_expr: string_expr  string_op string_expr 
-            | parenth_exp |  object_create | static_access_exp | instance_access_exp | STRING_LIT | array_attribute |ID ;
-
-array_component: ARRAY_LIT | MUL_ARRAY | array_attribute;
+instance_element: DOT ID (LB expr_list? RB)?;
+static_element: ID DOUBLE_COLON DO_ID (LB expr_list? RB)?;
+array_component: ARRAY LB (expr_list)? RB; 
 
 string_op: COMPARE_STRING|ADD_STRING;
+relational_op: EQUAL|DIFFER|LESS|GREATER|LESS_EQUAL|GREATER_EQUAL;
 relational_op_bool: EQUAL|DIFFER;
 relational_op_number: LESS|GREATER|LESS_EQUAL|GREATER_EQUAL|EQUAL;
 logical_op: AND|OR;
@@ -165,6 +143,9 @@ add_op: ADD|MINUS;
 multi_op: PRODUCT|DIVIDE;
 negation_op: NOT;
 negation_number: MINUS;
+index_op: (LS expr RS)+ ;
+
+
 
 //KEYWORDS
 ////KEYWORDS: [A-Z][a-z]+;
@@ -176,8 +157,6 @@ IF: 'If';
 ELSEIF: 'Elseif';
 ELSE: 'Else';
 FOREACH: 'Foreach';
-TRUE: 'True';
-FALSE: 'False';
 ARRAY: 'Array';
 IN: 'In';
 INT: 'Int';
@@ -195,6 +174,8 @@ CONSTRUCTOR: 'Constructor';
 DESTRUCTOR: 'Destructor';
 NEW: 'New';
 BY: 'By';
+TRUE: 'True';
+FALSE: 'False';
 
 
 //Identifier
@@ -205,6 +186,8 @@ fragment UNDERSCORE: '_';
 ID: (LOWERCASE|UPPERCASE|UNDERSCORE)(LOWERCASE|UPPERCASE|UNDERSCORE|DIGIT)*;
 DO_ID: '$'(LOWERCASE|UPPERCASE|UNDERSCORE|DIGIT)+;
 identifier: ID|DO_ID;
+
+
 
 
 //OPERATORS
@@ -258,8 +241,6 @@ fragment EXP_PART: ('e'|'E')[+-]?DIGIT+;
 
 
 
-///Boolean
-Bool_LIT: TRUE|FALSE;
 
 // String
 
@@ -280,23 +261,43 @@ UNCLOSE_STRING: '"' CHAR_STRING* {self.text = self.text.replace('"','',1)};
 
 ///Array declaration
 array_declaration: ARRAY LS ((type_name CM)? array_type? RS);
-array_attribute: ID (LS (NONZERO_INT|INT_LIT|expr) RS)+;
-array_type: NONZERO_INT|INT_LIT|FLOAT_LIT|STRING_LIT;
+array_attribute: ID (LS expr RS)+;
+array_type: NONZERO_INT|INT_LIT;
 //Array
-ARRAY_LIT: ARRAY_INT | ARRAY_FLOAT | ARRAY_BOOLEAN | ARRAY_STRING;
+array_lit: ARRAY LB (expr_list)? RB;
+mul_array: ARRAY LB (array_lit (CM array_lit)*) RB;
 
+// array_lit: array_int | array_float | array_boolean | array_string | array_expr;
+
+// array_int: ARRAY LB (INT_LIT (CM INT_LIT)*)? RB;
+// array_float: ARRAY LB (FLOAT_LIT (CM FLOAT_LIT)*)? RB;
+// array_boolean: ARRAY LB (boollit (CM boollit)*)? RB;
+// array_string: ARRAY LB (STRING_LIT (CM STRING_LIT)*)? RB;
+// array_expr: ARRAY LB (expr_list)? RB;
+
+///Lexer
+ARRAY_LIT: ARRAY_INT | ARRAY_FLOAT | ARRAY_BOOLEAN| ARRAY_STRING;
 fragment ARRAY_INT: ARRAY LB (INT_LIT INT_LIST)? RB;
 fragment ARRAY_FLOAT: ARRAY LB (FLOAT_LIT FLOAT_LIST)? RB;
-fragment ARRAY_BOOLEAN: ARRAY LB (Bool_LIT BOOLEAN_LIST)? RB;
+fragment ARRAY_BOOLEAN: ARRAY LB ((TRUE|FALSE) BOOLEAN_LIST)? RB;
 fragment ARRAY_STRING: ARRAY LB (STRING_LIT STRING_LIST)? RB;
 
 fragment INT_LIST: (CM  INT_LIT INT_LIST)?;
 fragment FLOAT_LIST: (CM FLOAT_LIT FLOAT_LIST)?;
-fragment BOOLEAN_LIST: (CM Bool_LIT BOOLEAN_LIST)?;
+fragment BOOLEAN_LIST: (CM (TRUE|FALSE) BOOLEAN_LIST)?;
 fragment STRING_LIST: (CM STRING_LIT STRING_LIST)?;
 
 
 //Multi Array
+// mul_array: ARRAY LB mul_array_lit RB;
+// mul_array_lit: mul_array_int | mul_array_float | mul_array_boolean | mul_array_string ;
+
+// mul_array_int: array_int(CM array_int)*;
+// mul_array_float: array_float(CM array_float)*;
+// mul_array_boolean: array_boolean(CM array_boolean)*;
+// mul_array_string: array_string(CM array_string)*;
+
+////Lexer
 MUL_ARRAY: ARRAY LB MUL_ARRAY_LIT RB;
 fragment MUL_ARRAY_LIT: MUL_ARRAY_INT | MUL_ARRAY_FLOAT | MUL_ARRAY_BOOLEAN | MUL_ARRAY_STRING;
 
@@ -304,7 +305,8 @@ fragment MUL_ARRAY_INT: ARRAY_INT (CM ARRAY_INT)*;
 fragment MUL_ARRAY_FLOAT: ARRAY_FLOAT (CM ARRAY_FLOAT)*; 
 fragment MUL_ARRAY_BOOLEAN: ARRAY_BOOLEAN (CM ARRAY_BOOLEAN)*; 
 fragment MUL_ARRAY_STRING: ARRAY_STRING (CM ARRAY_STRING)*; 
-
+///Boolean
+boollit: TRUE | FALSE;
 
 // 3.6 Seperators
 

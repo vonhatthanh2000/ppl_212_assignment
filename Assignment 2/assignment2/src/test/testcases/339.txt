@@ -1,0 +1,5 @@
+
+        Class Prograam { maain() {
+            a::$e();
+         }
+        }

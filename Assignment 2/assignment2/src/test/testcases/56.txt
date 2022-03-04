@@ -1,0 +1,1 @@
+Class Simple{Var a: Int = b+5;function(){Return a+b;}}

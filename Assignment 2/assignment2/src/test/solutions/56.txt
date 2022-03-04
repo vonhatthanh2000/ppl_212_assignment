@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Simple),[AttributeDecl(Instance,VarDecl(Id(a),IntType,BinaryOp(+,Id(b),IntLit(5)))),MethodDecl(Id(function),Instance,[],Block([Return(BinaryOp(+,Id(a),Id(b)))]))])])

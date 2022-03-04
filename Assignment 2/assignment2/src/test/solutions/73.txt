@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(daylaclass),[MethodDecl(Id(name),Instance,[param(Id(a),FloatType),param(Id(b),FloatType)],Block([For(Id(i),IntLit(1),BinaryOp(+,IntLit(1),IntLit(2)),IntLit(1),Block([Return()])])]))])])

@@ -1,0 +1,11 @@
+
+        Class Prograam { msain() {
+            If(a>b){
+                x = 2;
+            }
+            Elseif(x>0){
+                x=1;
+            }
+            
+         }
+        }

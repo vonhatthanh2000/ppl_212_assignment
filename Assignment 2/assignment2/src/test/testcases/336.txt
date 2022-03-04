@@ -1,0 +1,7 @@
+
+        Class Prosgram { masin() {
+            Foreach (i In 1 .. 100 By 3) {
+                x = x + 1;
+            }
+         }
+        }

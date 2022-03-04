@@ -49,7 +49,7 @@ class ParserSuite(unittest.TestCase):
         input = """
         Class Test{
             $getnumber(){
-                Return Self.length.short + Self.width.long;
+                Return Self.length + Self.width;
             }
         }
         """
@@ -615,7 +615,7 @@ class ParserSuite(unittest.TestCase):
         Class class1{
             Var cas2: Int;
             main(){
-                a = a::$abc + abc.abc.a();
+                a = a::$abc + abc.abc;
                 Foreach (abc In 1+2 .. 10*2 By 2+2){
                     a = a + b;
                 }
@@ -944,7 +944,7 @@ class ParserSuite(unittest.TestCase):
     def test_73(self):
         input = """
         Class Test{
-            Var test: Boolean = a < b > c == d;
+            Var test: Boolean = a < b ;
         }
         """
         expect = 'successful'

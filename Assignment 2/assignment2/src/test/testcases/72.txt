@@ -1,0 +1,1 @@
+Class daylaclass {name(a,b:Float){Foreach (i In 1 .. 1+2 By 1){}}}

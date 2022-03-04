@@ -1,0 +1,5 @@
+
+        Class Progsram { Destructor() {
+            x = x + 2;
+         }
+        }

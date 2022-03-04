@@ -1,0 +1,4 @@
+
+        Class Progsram { 
+            Var x,y:Array[String,2] = Array("ax","ca");
+        }

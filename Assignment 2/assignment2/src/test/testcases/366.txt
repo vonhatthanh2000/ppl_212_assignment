@@ -1,0 +1,4 @@
+
+        Class Program { main() { }
+        main(amb:Int){}
+        }

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(ns),[AttributeDecl(Static,ConstDecl(Id($y),IntType,IntLit(90))),AttributeDecl(Static,ConstDecl(Id($x),IntType,IntLit(159))),AttributeDecl(Instance,ConstDecl(Id(a),IntType,IntLit(19)))])])

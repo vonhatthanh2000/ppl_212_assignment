@@ -1,0 +1,1 @@
+Class Simple{ta(a,b: String;t,h: Int){Val x, y: Int = 1, 6;}}

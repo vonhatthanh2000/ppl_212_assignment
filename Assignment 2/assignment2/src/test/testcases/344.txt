@@ -1,0 +1,5 @@
+
+        Class Prograsm { msain() {
+            Return a + 2;
+         }
+        }

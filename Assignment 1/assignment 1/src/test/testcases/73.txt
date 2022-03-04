@@ -1,5 +1,5 @@
 
         Class Test{
-            Var test: Boolean = a < b > c == d;
+            Var test: Boolean = a < b ;
         }
         

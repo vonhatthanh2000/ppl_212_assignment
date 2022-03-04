@@ -1,0 +1,5 @@
+
+        Class Progrdam { maind() {
+            x.a(2,"se",x,a,2);
+         }
+        }

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Simple),[MethodDecl(Id(ta),Instance,[param(Id(a),StringType),param(Id(b),StringType),param(Id(t),IntType),param(Id(h),IntType)],Block([AssignStmt(Id(a),ArrayCell(Id(b),[IntLit(1),IntLit(2),BinaryOp(+,IntLit(3),IntLit(4))]))])),MethodDecl(Id(function),Instance,[],Block([AssignStmt(FieldAccess(Id(a),Id(y)),BinaryOp(/,IntLit(1),IntLit(4)))]))])])

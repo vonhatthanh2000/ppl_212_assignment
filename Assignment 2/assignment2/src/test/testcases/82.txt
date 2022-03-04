@@ -1,0 +1,1 @@
+Class vas { x(a:Int){a.b = 2;}}

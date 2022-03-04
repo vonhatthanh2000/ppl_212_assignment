@@ -1,0 +1,1 @@
+Class Simple{block(){a = b+5;}function(){Return a+b;}}

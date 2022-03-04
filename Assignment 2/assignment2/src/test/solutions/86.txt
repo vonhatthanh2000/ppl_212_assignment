@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(vas),[MethodDecl(Id(name),Instance,[param(Id(vari),BoolType)],Block([AssignStmt(FieldAccess(FieldAccess(FieldAccess(Id(b),Id($_w)),Id(l)),Id(i)),IntLit(2))]))])])

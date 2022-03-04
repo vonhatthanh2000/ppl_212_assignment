@@ -1,7 +1,7 @@
 
         Class Test{
             $getnumber(){
-                Return Self.length.short + Self.width.long;
+                Return Self.length + Self.width;
             }
         }
         

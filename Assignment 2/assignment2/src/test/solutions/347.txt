@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Progsram),[MethodDecl(Id(Destructor),Instance,[],Block([AssignStmt(Id(x),BinaryOp(+,Id(x),IntLit(2)))]))])])

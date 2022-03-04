@@ -1,0 +1,1 @@
+Class Simple{Val $Shape: Int = 3;Var a,b: Int = 1, 2;ta(a,b:Int){a = 1+2;}$staticfun(){}Destructor(){If (a+b){Return;}}}Class Simple2{}

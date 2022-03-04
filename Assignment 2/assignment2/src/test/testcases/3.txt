@@ -1,0 +1,1 @@
+Class Simple{Val $Shape: Int = 3;ta{a = 1+2;}}Class Simple2{}

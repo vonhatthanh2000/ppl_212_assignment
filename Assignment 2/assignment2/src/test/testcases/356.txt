@@ -1,0 +1,4 @@
+
+        Class Progsram { 
+            Var x,y:Array[Boolean,2] = Array(True,False);
+        }

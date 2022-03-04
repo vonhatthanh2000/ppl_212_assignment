@@ -1,0 +1,6 @@
+
+        Class Prograsm { maisn() {
+            x = a.x.y(3,4).n;
+            y = a::$b.c.d(d,2).e;
+         }
+        }

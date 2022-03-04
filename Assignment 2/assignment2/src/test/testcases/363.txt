@@ -1,0 +1,6 @@
+
+        Class Prograsm { maisn() {
+            x = x[1][2][2+2];
+            y = x>=y;
+         }
+        }

@@ -1,0 +1,19 @@
+expr_list: expr (CM expr)*;
+expr: string_expr;
+string_expr: relational_expr string_op relational_expr | relational_expr;
+relational_expr: logical_expr relational_op logical_expr | logical_expr;
+logical_expr: logical_expr logical_op add_expr | add_expr;
+add_expr: add_expr add_op mul_expr | mul_expr;
+mul_expr: mul_expr multi_op log_expr | log_expr;
+log_expr: negation_op log_expr | sign_expr;
+sign_expr: negation_number sign_expr | index_expr;
+index_exp: index_exp index_op | instance_access_expr;
+instance_access_expr: instance_element | static_access_expr;
+static_access_expr: static_element | new_expr;
+new_expr: NEW new_expr | parenth_exp;
+parenth_exp: LB expr RB | operative;
+operative: NONZERO_INT | INT_LIT | FLOAT_LIT | Bool_LIT |array_attribute| ID ;
+
+
+instance_element: (ID|static_access_expr|Self) DOT ID (LB expr_list? RB)?;
+static_element: ID DOUBLE_COLON DO_ID (LB expr_list? RB)?;

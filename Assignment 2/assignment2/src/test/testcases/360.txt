@@ -1,0 +1,4 @@
+
+        Class Progsram { 
+            Var x:Array[Array[Array[Int,2],2],2] = Array(Array(Array(2_2,032),Array(12_2,0132)),Array(Array(2_2,032),Array(12_2,0132)));
+        }

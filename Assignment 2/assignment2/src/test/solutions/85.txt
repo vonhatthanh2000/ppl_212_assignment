@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(v),[AttributeDecl(Instance,VarDecl(Id(d),ClassType(Id(s)),NewExpr(Id(x),[IntLit(5),IntLit(2),StringLit(text)])))])])

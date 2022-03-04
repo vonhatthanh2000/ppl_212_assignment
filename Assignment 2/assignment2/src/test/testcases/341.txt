@@ -1,0 +1,5 @@
+
+        Class Prosgram { maidn() {
+            x::$b().c();
+         }
+        }

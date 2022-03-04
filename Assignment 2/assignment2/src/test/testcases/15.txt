@@ -1,0 +1,1 @@
+Class Simple{Val $Shape: Int = 3;Var a,b: Int =1+2, 2;ta(a,b:Int){a = 1+2;}$staticfun(){}Destructor(){}}Class Simple2{Val a,_tb: Float = 1.4,4.2;Var x,$b: Int = 0x123A,0b101 + 023;}

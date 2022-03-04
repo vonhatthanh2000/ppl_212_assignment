@@ -1,0 +1,4 @@
+
+        Class Progsram { 
+            Var x,y:Array[Int,2] = Array(22,32);
+        }

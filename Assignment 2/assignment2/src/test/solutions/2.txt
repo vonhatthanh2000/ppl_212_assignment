@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Simple),[AttributeDecl(Static,ConstDecl(Id($Shape),IntType,IntLit(3)))]),ClassDecl(Id(Simple2),[])])

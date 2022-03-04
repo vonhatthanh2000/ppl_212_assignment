@@ -1,0 +1,1 @@
+Class Simple{ta(a,b: String;t,h: Int){a = b[1][2][3+4];}function(){a.y = 1/4;}}

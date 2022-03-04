@@ -1,0 +1,5 @@
+
+        Class Prosgram { Constructor(a,b:Int) {
+            x.a();
+         }
+        }

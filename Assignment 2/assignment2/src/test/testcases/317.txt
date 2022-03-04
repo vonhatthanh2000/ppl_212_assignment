@@ -1,0 +1,5 @@
+
+        Class vas { x(a,b:Int){
+            Val x: Int = 2;
+        }
+        }

@@ -1,0 +1,5 @@
+
+        Class Prograsm { maisn() {
+            x = New a(x,y,2);
+         }
+        }

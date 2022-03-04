@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(vas),[MethodDecl(Id(x),Instance,[param(Id(a),IntType)],Block([AssignStmt(FieldAccess(CallExpr(Id(a),Id(x),[]),Id(y)),IntLit(2))]))])])

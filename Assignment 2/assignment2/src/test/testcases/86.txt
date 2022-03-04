@@ -1,0 +1,1 @@
+Class vas { name(vari:Boolean){b::$_w.l.i = 2;}}

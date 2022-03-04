@@ -1,0 +1,1 @@
+Class Simple{Val $Shape: Int = 3;Var a,b: Int =New X() + Self.ID() + 3 || ((1+4) > 5), a[1] + 2;gloat(a,b:Int){a = 1+2;}$staticfun(){}Destructor(){}}Class Simple2{Val a,_tb: Float = 1.4,4.2;Var x: Array[Array[Int,0b1010],2] = Array(Array(1,2,3),Array(0x123A,0b101,042));}
